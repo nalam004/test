@@ -62,9 +62,9 @@ function stopTimer() {
     }
     const elapsed = Date.now() - startTime;
     if (countdownSeconds > 0) {
-        resultDisplay.textContent = `Timer: ${Math.floor(elapsed / 1000)}s`;
+        resultDisplay.textContent = `Game Over! Elapsed Time: ${Math.floor(elapsed / 1000)}s`;
     } else {
-        resultDisplay.textContent = `Timer: 0s`;
+        resultDisplay.textContent = `Game Over! Elapsed Time: 0s`;
     }
     showGameOverScreen();
 }
@@ -72,7 +72,7 @@ function stopTimer() {
 function showLoserScreen() {
     countdownTimer.classList.add('hidden');
     gameOverScreen.classList.remove('hidden');
-    resultDisplay.textContent = 'Timer: 0s';
+    resultDisplay.textContent = 'Game Over! Elapsed Time: 0s';
 }
 
 function showGameOverScreen() {
